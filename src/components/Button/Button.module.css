@@ -1,0 +1,10 @@
+.buttonStyle {
+  border: black 4px dashed;
+  padding: 15px 32px;
+  border-radius: 3px;
+}
+
+.btn-primary {
+  color: white;
+  background-color: blue;
+}
