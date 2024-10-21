@@ -1,9 +1,9 @@
-import Like from "./components/Like";
+import ParentComponent from "./components/ParentChild";
 
 function App() {
   return (
     <div>
-      <Like onClick={() => console.log("clicked")} />
+      <ParentComponent></ParentComponent>
     </div>
   );
 }
