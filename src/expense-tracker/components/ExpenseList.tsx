@@ -1,3 +1,6 @@
+import { QuestionCircleOutlined } from "@ant-design/icons";
+import { Button, Popconfirm } from "antd";
+
 interface Expense {
   id: number;
   description: string;
@@ -33,12 +36,14 @@ const ExpenseList = ({ expenses, onDelete }: Props) => {
             <td>${expense.amount}</td>
             <td>{expense.category}</td>
             <td>
-              <button
-                className="btn btn-outline-danger"
-                onClick={() => onDelete(expense.id)}
+              <Popconfirm
+                title="Delete this expense"
+                description="Are you sure to delete this expense?"
+                onConfirm={() => onDelete(expense.id)}
+                icon={<QuestionCircleOutlined style={{ color: "red" }} />}
               >
-                Delete
-              </button>
+                <Button danger>Delete</Button>
+              </Popconfirm>
             </td>
           </tr>
         ))}
